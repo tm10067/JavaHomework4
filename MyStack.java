@@ -23,12 +23,18 @@ public class MyStack {
 
     //посмотреть последнее в стеке
     private static String peek() {
+        if (queue.isEmpty()){
+            return "stack is empty";
+        }
         String peekItem = stack.get(stack.size() - 1);
         return "last element: " + peekItem;
     }
 
     //посмотреть и извлечь последнее в стеке
     private static String pop() {
+        if (queue.isEmpty()){
+            return "stack is empty";
+        }
         String popItem = stack.get(stack.size() - 1);
         stack.removeLast();
         return "deleted: " + popItem;

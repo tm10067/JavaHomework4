@@ -25,12 +25,18 @@ public class MyQueue {
 
     //посмотреть первое в очереди
     private static String top() {
+        if (queue.isEmpty()){
+            return "queue is empty";
+        }
         String topItem = queue.get(0);
         return "first element: " + topItem;
     }
 
     //извлечь и вернуть первое в очереди
     private static String remove() {
+        if (queue.isEmpty()){
+            return "queue is empty";
+        }
         String removeItem = queue.get(0);
         queue.remove(removeItem);
         return "deleted: " + removeItem;
