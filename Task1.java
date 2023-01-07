@@ -8,9 +8,15 @@ import java.util.List;
 
 public class Task1 {
     public static void main(String[] args) {
-        LinkedList<String> list = new LinkedList<>(List.of("hello", "my", "friend"));  // задаем список
+        LinkedList list = new LinkedList(List.of("hello", "my", "friend")); // задаем список
         System.out.println(list);
-        Collections.reverse(list); // переворачиваем список
+        revLinkedList(list); // вызов метода
         System.out.println(list);
+    }
+
+    // метод переворачивающий список
+    public static LinkedList revLinkedList(LinkedList list) {
+        Collections.reverse(list);
+        return list;
     }
 }
